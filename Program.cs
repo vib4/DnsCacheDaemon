@@ -136,20 +136,7 @@ namespace DnsCacheDaemon
                         }
                     }
                 }
-                /*
-                foreach (DnsRecordBase record in upstreamResponse.AdditionalRecords)
-                {
-                    response.AnswerRecords.Add(record);
 
-                    if (!recordsRecieved.Contains(record.Name.ToString() + "|" + record.RecordType.ToString() + "|" + record.RecordType.ToString()))
-                    {
-                        if (record.RecordType.ToString().ToUpper() != "OPT")
-                        {
-                            LogToThreadLockedConsole(string.Format("<-- Response from upstream (ADDL): {0} (Type: {1})", record.Name, record.RecordType), ConsoleColor.Gray, true);
-                            recordsRecieved.Add(record.Name.ToString() + "|" + record.RecordType.ToString() + "|" + record.RecordType.ToString());
-                        }
-                    }
-                }*/
             }
 
             response.ReturnCode = ReturnCode.NoError;
